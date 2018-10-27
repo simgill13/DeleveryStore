@@ -35,7 +35,6 @@ let config = {
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin(),
     new CleanWebpackPlugin(['dist']),
   ]
 };
