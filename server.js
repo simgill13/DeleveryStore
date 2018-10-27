@@ -5,11 +5,7 @@ module.exports = {
   app: function () {
     const app = express()
     const indexPath = path.join(__dirname, './dist/index.html')
-    const publicPath = express.static(path.join(__dirname, './dist/App.bundle.js'))
-    console.log('+++++',indexPath)
-    console.log('piblic',path.join(__dirname, './dist/App.bundle.js'))
-
-    app.use('/public', publicPath)
+    app.use(express.static(path.resolve(__dirname, './dist')));
     app.get('/', function (_, res) { res.sendFile(indexPath) })
 
     return app
