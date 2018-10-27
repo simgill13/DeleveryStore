@@ -15,7 +15,7 @@ class App extends Component {
         console.log(this.props)
         return (
             <div>
-                <h2> app component </h2>
+                <h2> app component test </h2>
             </div> 
         );
     }
