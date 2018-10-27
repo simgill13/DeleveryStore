@@ -35,10 +35,7 @@ let config = {
     ]
   },
   plugins: [
-    new HtmlWebPackPlugin({
-      template: "./public/index.html",
-      filename: "./index.html"
-    }),
+    new HtmlWebPackPlugin(),
     new CleanWebpackPlugin(['dist']),
   ]
 };
