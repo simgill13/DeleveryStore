@@ -4,6 +4,7 @@ import Second                             from './Second'
 import Header                             from './Header'
 import { userName }                       from '../actions/action';
 import '../main.css'
+import '../styles/app.scss'
 import {
     BrowserRouter as Router,
     Route,
@@ -39,6 +40,9 @@ class App extends Component {
             </div>
             <div  className="second">
               second
+            </div>
+            <div  className="third">
+              third
             </div>
             
           </div>
