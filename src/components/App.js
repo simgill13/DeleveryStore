@@ -2,6 +2,7 @@ import React,{ Component }               from "react";
 import {connect}            from "react-redux";
 import Second from './Second'
 import Header from './Header'
+import '../main.css'
 import {
     BrowserRouter as Router,
     Route,
@@ -20,16 +21,11 @@ class App extends Component {
        
           <div className="App">
   
-            <div className="container">
-              <ul>
-                <li><Link to="/hello">Hello</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li>
-                  <Link to="/books">Books</Link>
-                </li>
-              </ul>
-              <hr/>
-  
+            <div  id='sim' className="sim">
+              hello
+            </div>
+            <div  className="second">
+              second
             </div>
           </div>
         

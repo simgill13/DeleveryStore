@@ -1,7 +1,5 @@
-
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-
 const path = require('path');
 
 
@@ -28,6 +26,25 @@ let config = {
         }
       },
       {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" },
+          { loader: 'sass-loader' }
+        ]
+      },
+      {
         test: /\.html$/,
         use: [
           {
@@ -48,9 +65,13 @@ let config = {
 };
 
 
+
+
+
+
+
+
 module.exports = (env, argv) => {
-    console.log('env====>',env)
-    console.log('argv====>',argv.mode)
       if (argv.mode === 'development') {
         config.devtool = 'source-map';
         config.mode = argv.mode
@@ -60,8 +81,10 @@ module.exports = (env, argv) => {
         config.mode = argv.mode
         return config
       }
-
-      console.log('hit')
     
       return config;
  };
+
+
+
+
