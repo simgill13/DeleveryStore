@@ -1,12 +1,7 @@
 import React,{ Component }               from "react";
 import {connect}            from "react-redux";
-// import Header from './Header'
-// import Main from './Main'
-// import {Link}               from "react-router";
 import Second from './Second'
 import Header from './Header'
-
-// import route Components here
 import {
     BrowserRouter as Router,
     Route,
@@ -22,7 +17,7 @@ import {
 class App extends Component {
     render() {
       return (
-        <Router>
+       
           <div className="App">
   
             <div className="container">
@@ -35,15 +30,9 @@ class App extends Component {
               </ul>
               <hr/>
   
-            <Switch>
-              <Route exact path="/" component={Second} />
-              <Route path="/about" component={Header} />
-            </Switch>
-  
-  
             </div>
           </div>
-        </Router>
+        
       );
     }
   }
