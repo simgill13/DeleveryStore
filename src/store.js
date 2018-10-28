@@ -6,17 +6,26 @@ import firstReducer from "./reducers/firstReducer";
 import secondReducer from "./reducers/secondReducer";
 
 
+let appStore 
 if (process.env.NODE_ENV !== 'production') {
        console.log('Looks like we are in development mode!');
+       const logger = createLogger();
+       appStore =  createStore(
+         combineReducers({ firstReducer, secondReducer }),
+         {},
+         applyMiddleware(thunk,logger)
+       );  
+}
+else{
+  console.log('Looks like we are in Production mode!');
+  const logger = createLogger();
+  appStore =  createStore(
+    combineReducers({ firstReducer, secondReducer }),
+    {},
+    applyMiddleware(thunk)
+  ); 
 }
 
 
-const logger = createLogger();
 
-// const middleware = applyMiddleware(thunk, createLogger({collapsed:true}), routerMiddleware(browserHistory))
-export default createStore(
-  combineReducers({ firstReducer, secondReducer }),
-  {},
-  applyMiddleware(thunk,logger)
-);
-
+export default appStore 
