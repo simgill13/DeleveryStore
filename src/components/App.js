@@ -1,7 +1,8 @@
-import React,{ Component }               from "react";
-import {connect}            from "react-redux";
-import Second from './Second'
-import Header from './Header'
+import React,{ Component }                from "react";
+import {connect}                          from "react-redux";
+import Second                             from './Second'
+import Header                             from './Header'
+import { userName }                       from '../actions/action';
 import '../main.css'
 import {
     BrowserRouter as Router,
@@ -16,17 +17,30 @@ import {
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name:'react'
+    }
+  }
+
+  componentDidMount(){
+    this.props.changeName('SIMMMMMMMM')
+  }
     render() {
+      console.log('props',this.props)
+     
       return (
        
           <div className="App">
   
             <div  id='sim' className="sim">
-              hello
+              {this.state.name}
             </div>
             <div  className="second">
               second
             </div>
+            
           </div>
         
       );
@@ -48,8 +62,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setName: (name) => {
-            dispatch(setName(name));
+        changeName: (name) => {
+            dispatch(userName(name));
         }
     };
 };
