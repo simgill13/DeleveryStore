@@ -14,6 +14,10 @@ let config = {
         path: path.resolve(__dirname, 'dist'),
         filename: 'App.bundle.js'
     },
+    devServer: {
+        historyApiFallback: true,
+        contentBase: './'
+      },
   module: {
     rules: [
       {
