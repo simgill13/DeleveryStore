@@ -66,6 +66,10 @@ const styles = theme => ({
     borderTop: `1px solid ${theme.palette.divider}`,
     padding: `${theme.spacing.unit * 6}px 0`,
   },
+  image:{
+    maxWidth: '100%',
+    maxHeight: '100%'
+  }
 });
 
 const tiers = [
@@ -138,7 +142,9 @@ function Pricing(props) {
   const { classes } = props;
 
   return (
+    
     <React.Fragment>
+      <img style={{maxHeight:'100%',maxWidth:'100%'}} src={van2} />
       <CssBaseline />
       <AppBar position="static" color="default" className={classes.appBar}>
         {/* <Toolbar>
@@ -160,7 +166,7 @@ function Pricing(props) {
 
 
 
-        <img src={van2} />
+        
 
 
 
