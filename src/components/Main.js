@@ -13,6 +13,12 @@ import StarIcon from '@material-ui/icons/StarBorder';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import ButtonAppBar                             from './Header'
+import TemporaryDrawer from './Drawer'
+import { Zoom } from 'react-slideshow-image';
+import van from '../images/van.png'
+import van2 from '../images/van2.png'
+
 
 const styles = theme => ({
   '@global': {
@@ -115,6 +121,19 @@ const footers = [
   },
 ];
 
+const images = [
+  van,
+  van2,
+];
+const zoomOutProperties = {
+  duration: 5000,
+  transitionDuration: 500,
+  infinite: true,
+  indicators: true,
+  scale: 0.4,
+  arrows: true
+}
+
 function Pricing(props) {
   const { classes } = props;
 
@@ -122,7 +141,7 @@ function Pricing(props) {
     <React.Fragment>
       <CssBaseline />
       <AppBar position="static" color="default" className={classes.appBar}>
-        <Toolbar>
+        {/* <Toolbar>
           <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
             Company name
           </Typography>
@@ -132,18 +151,32 @@ function Pricing(props) {
           <Button color="primary" variant="outlined">
             Login
           </Button>
-        </Toolbar>
+        </Toolbar> */}
+        <ButtonAppBar/>
       </AppBar>
       <main className={classes.layout}>
         {/* Hero unit */}
+
+
+
+
+        <img src={van2} />
+
+
+
+
+
         <div className={classes.heroContent}>
+
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
             Pricing
           </Typography>
+
           <Typography variant="h6" align="center" color="textSecondary" component="p">
             Quickly build an effective pricing table for your potential customers with this layout.
             It&apos;s built with default Material-UI components with little customization.
           </Typography>
+        
         </div>
         {/* End hero unit */}
         <Grid container spacing={40} alignItems="flex-end">

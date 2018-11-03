@@ -28,13 +28,13 @@ let config = {
       {
         test: /\.(png|jpg|gif)$/i,
         use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192
-            }
-          },
-          { loader: 'file-loader' }
+          { loader: 'file-loader' },
+        ]
+      },
+      {
+        test: /\.(gif)$/i,
+        use: [
+          { loader: 'url-loader'}
         ]
       },
       {

@@ -1,7 +1,6 @@
 import React,{ Component }                from "react";
 import {connect}                          from "react-redux";
-import Pricing                         from './Second'
-import Header                             from './Header'
+import Pricing                         from './Main'
 import { userName }                       from '../actions/action';
 import '../main.css'
 import '../styles/app.scss'

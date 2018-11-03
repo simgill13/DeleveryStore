@@ -2,7 +2,7 @@ import {render}                                     from "react-dom";
 import React                                        from "react";
 import {Provider}                                   from "react-redux";
 import App                                          from "./components/App";
-import Second                                          from "./components/Second";
+// import Second                                          from "./components/Second";
 import store                                        from "./store";
 import {
     BrowserRouter as Router,
@@ -17,7 +17,7 @@ render(
         <Router>
             <Switch>
                 <Route exact path="/" component={App} />
-                <Route path="/about" component={Second} />
+                {/* <Route path="/about" component={Second} /> */}
             </Switch>
         </Router>
     </Provider>,
