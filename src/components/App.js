@@ -1,6 +1,6 @@
 import React,{ Component }                from "react";
 import {connect}                          from "react-redux";
-import Second                             from './Second'
+import Pricing                         from './Second'
 import Header                             from './Header'
 import { userName }                       from '../actions/action';
 import '../main.css'
@@ -12,6 +12,8 @@ import {
     Switch,
     Redirect
   } from 'react-router-dom'
+  import Button from '@material-ui/core/Button';
+  
 
 
 
@@ -35,15 +37,11 @@ class App extends Component {
        
           <div className="App">
   
-            <div  id='sim' className="sim">
-              {this.state.name}
-            </div>
-            <div  className="second">
-              second
-            </div>
-            <div  className="third">
-              third
-            </div>
+            
+            
+
+    <Pricing/>
+
             
           </div>
         

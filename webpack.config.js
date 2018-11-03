@@ -19,7 +19,7 @@ let config = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/i, 
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
@@ -33,7 +33,8 @@ let config = {
             options: {
               limit: 8192
             }
-          }
+          },
+          { loader: 'file-loader' }
         ]
       },
       {
