@@ -1,6 +1,6 @@
 import React,{ Component }                from "react";
 import {connect}                          from "react-redux";
-import Pricing                         from './Main'
+import Main                         from './Main'
 import { userName }                       from '../actions/action';
 import '../main.css'
 import '../styles/app.scss'
@@ -32,6 +32,7 @@ class App extends Component {
     render() {
       console.log('props',this.props)
      
+     
       return (
        
           <div className="App">
@@ -39,7 +40,7 @@ class App extends Component {
             
             
 
-    <Pricing/>
+    <Main/>
 
             
           </div>
