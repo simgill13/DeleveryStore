@@ -25,6 +25,8 @@ import PlacesAutocomplete, {
 import {styles ,tiers,footers} from '../styles/main'
 import '../styles/main.scss'
 import '../styles/mainIphone.scss'
+import Icon from '@material-ui/core/Icon';
+import Row from './Row';
 
 
 
@@ -116,8 +118,25 @@ class Main extends Component {
       </AppBar>
 
 
-      
+        <div className='gurantee'>
+          <div className='icontext'>
+            <Icon className='motoicon'>motorcycle</Icon>
+          </div>
+          <div className='icontext'>
+            <p className='quickD'> Quick Delivery</p>
+          </div>
+         
+        </div>
 
+        <Row/>
+      
+      {/* <Typography component="h4" variant="h5" align="left" color="textPrimary" gutterBottom>
+            Flower 
+          </Typography>
+
+          <Typography variant="h6" align="lect" color="textSecondary" component="p">
+            We Strive to bring you to the highest quality products, stright from the source.
+          </Typography> */}
 
 
       <main className={classes.layout}>
@@ -134,13 +153,7 @@ class Main extends Component {
 
         <div className={classes.heroContent}>
 
-          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-            Trending 
-          </Typography>
-
-          <Typography variant="h6" align="center" color="textSecondary" component="p">
-            We Strive to bring you to the highest quality products, stright from the source.
-          </Typography>
+          
         
         </div> 
         {/* End hero unit */}

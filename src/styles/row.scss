@@ -1,0 +1,23 @@
+.container{
+    // border:solid;
+    height: 400px;
+    margin: 45px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.flowerText{
+    color: rgb(55, 56, 56);
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: "Open Sans", Helvetica;
+    margin: 0px;
+}
+
+.subText{
+    font-size: .8rem;
+    font-family: Proxima, "Open sans", Helvetica;
+    letter-spacing: 0.03em;
+    color: rgb(55, 56, 56);
+    margin: 0px;
+}
