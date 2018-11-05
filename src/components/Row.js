@@ -43,7 +43,7 @@ class Row extends Component {
                  <p className='flowerText'> Flower</p>
                  <p className='subText'> The best bud. Grind it up, roll it, or pack into your preferred smoking device.</p>
               </div>
-              <div>
+              <div className='cardsrow'>
                   <div style={{display:'inline-block',margin:'10px'}}>
                     <MediaCard/>
                   </div>
@@ -65,7 +65,7 @@ class Row extends Component {
                  <p className='flowerText'> Edibles</p>
                  <p className='subText'> A tasty alternative for enjoyment and relief. Everything from low dose to non-psychoactive options that deliver a long-lasting effect</p>
               </div>
-              <div>
+              <div className='cardsrow'>
                   <div style={{display:'inline-block',margin:'10px'}}>
                     <MediaCard/>
                   </div>
