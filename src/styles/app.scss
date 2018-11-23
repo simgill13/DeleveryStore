@@ -19,3 +19,128 @@
     margin-left: -50px;
     margin-top: -50px;
 }
+
+.image-container{
+    height: 100vh;
+    width:100vw;
+    background-image: linear-gradient(to top, #000000 0%, #000000 52%, #000000 100%);
+}
+
+.logo-container{
+    width: 100%;
+    // height: 100%;
+    // border: solid white;
+    position: absolute;
+    margin-top: 15%;
+    animation-duration: 3s;
+    // animation-delay: 2s;
+    // animation-iteration-count: infinite;
+    
+    
+
+}
+.logo-b{
+    text-align: center;
+    color:#94793C;
+    font-family: 'Snell Roundhand';
+    font-size: 130px;
+    // border: solid blue
+
+}
+
+.bunzee-tagline{
+    color: white;
+    text-align: center;
+    // border: solid white;
+    font-family: 'Hiragino Mincho ProN';
+    margin-top: -40px
+}
+
+.login-form{
+    text-align: center
+}
+
+.labels{
+    color: white
+}
+ 
+.ui.input input {
+    background: #151515;
+}
+input:focus{
+    background-color: #bdbdbd !important;
+}
+
+.login-button{
+    background: transparent;
+    color: rgb(160, 160, 160);
+    border-color: #92793c;
+    padding: 7px;
+    width: 71px;
+    border-top: none !important;
+    border-left: none;
+    border-right: none;
+}
+
+.choice-container{
+    width: 100%;
+    // border: solid white;
+    text-align: center;
+
+}
+
+.login-form,.center-line,.browse-option{
+    display: inline-block
+}
+
+.center-line{
+    margin-left: 34px;
+    border: solid #2f2f2f;
+    height: 145px;
+    border-width: 0.5px;
+    margin-bottom: -10px;
+}
+
+.browse-option{
+    margin-left: 20px;
+    height: -44px;
+    width: 171px;
+    height: 170px;
+    // border: solid white; 
+    // 
+    vertical-align: top;
+}
+
+.search-icon{
+    display: inline-block;
+    color: white;
+    font-size: 44px !important;
+    margin-top: 52px !important;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.search-button{
+    display: block;
+    background: transparent;
+    color: #a0a0a0;
+    border-color: #92793c;
+    padding: 7px;
+    width: 71px;
+    margin-top: 42px;
+    margin-left: 53px;
+    border-top: none !important;
+    border-left: none;
+    border-right: none;
+}
+
+.search-img{
+    height: 50px;
+    width: 46px;
+    margin-top: 38px;
+    margin-left: 40px;
+    
+}

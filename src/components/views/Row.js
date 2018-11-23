@@ -1,7 +1,5 @@
 import React,{ Component }                from "react";
-import {connect}                          from "react-redux";
-import { userName }                       from '../actions/action';
-import '../styles/row.scss'
+import 'styles/row.scss'
 import {
     BrowserRouter as Router,
     Route,
@@ -10,8 +8,8 @@ import {
     Redirect
   } from 'react-router-dom'
   import Button from '@material-ui/core/Button';
-  import MediaCard from './card'
-  import '../styles/mainIphone.scss'
+  import MediaCard from 'components/views/card'
+  import 'styles/mainIphone.scss'
 
   
 
@@ -93,41 +91,4 @@ class Row extends Component {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const mapStateToProps = (state) => {
-  return {
-    firstReducer:state.firstReducer,
-    secondReducer:state.secondReducer
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        changeName: (name) => {
-            dispatch(userName(name));
-        }
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Row);
+export default Row;

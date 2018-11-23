@@ -62,11 +62,38 @@ and (-webkit-min-device-pixel-ratio: 2) {
     .location-search-input{
         margin-left: -44px;
     }
-    .container {
-        
-        margin: 21px !important;
-       
+    .choice-container {  
+       margin-top: 65px;  
     }
+    .center-line {
+        margin-left: 0%;
+        border: solid #2f2f2f;
+         height: 0px; 
+        width: 70%;
+        border-width: 0.5px;
+         margin-bottom: 0px; 
+        margin-top: 49px;
+    }
+    .search-img {
+        height: 50px;
+        width: 46px;
+        margin-top: 38px;
+        margin-left: 0px;
+    }
+    .search-button {
+        display: block;
+        background: transparent;
+        color: #a0a0a0;
+        border-color: #92793c;
+        padding: 7px;
+        width: 71px;
+        margin-top: 42px;
+        margin-left: 37px;
+        border-top: none !important;
+        border-left: none;
+        border-right: none;
+    }
+
 }
 
 /* Portrait */
@@ -83,6 +110,37 @@ and (orientation: portrait) {
         margin: 21px !important;
        
     }
+    .center-line {
+        margin-left: 0%;
+        border: solid #2f2f2f;
+         height: 0px; 
+        width: 70%;
+        border-width: 0.5px;
+         margin-bottom: 0px; 
+        margin-top: 49px;
+    }
+    .search-img {
+        height: 50px;
+        width: 46px;
+        margin-top: 38px;
+        margin-left: 0px;
+    }
+    .search-button {
+        display: block;
+        background: transparent;
+        color: #a0a0a0;
+        border-color: #92793c;
+        padding: 7px;
+        width: 71px;
+        margin-top: 42px;
+        margin-left: 37px;
+        border-top: none !important;
+        border-left: none;
+        border-right: none;
+    }
+    .choice-container {  
+        margin-top: 65px;  
+     }
 }
 
 /* Landscape */
@@ -99,6 +157,37 @@ and (orientation: landscape) {
         margin: 21px !important;
        
     }
+    .center-line {
+        margin-left: 0%;
+        border: solid #2f2f2f;
+         height: 0px; 
+        width: 70%;
+        border-width: 0.5px;
+         margin-bottom: 0px; 
+        margin-top: 49px;
+    }
+    .search-img {
+        height: 50px;
+        width: 46px;
+        margin-top: 38px;
+        margin-left: 0px;
+    }
+    .search-button {
+        display: block;
+        background: transparent;
+        color: #a0a0a0;
+        border-color: #92793c;
+        padding: 7px;
+        width: 71px;
+        margin-top: 42px;
+        margin-left: 37px;
+        border-top: none !important;
+        border-left: none;
+        border-right: none;
+    }
+    .choice-container {  
+        margin-top: 65px;  
+     }
 
 }
 
@@ -123,6 +212,37 @@ and (-webkit-min-device-pixel-ratio: 3) {
         margin: 21px !important;
        
     }
+    .center-line {
+        margin-left: 0%;
+        border: solid #2f2f2f;
+         height: 0px; 
+        width: 70%;
+        border-width: 0.5px;
+         margin-bottom: 0px; 
+        margin-top: 49px;
+    }
+    .search-img {
+        height: 50px;
+        width: 46px;
+        margin-top: 38px;
+        margin-left: 0px;
+    }
+    .search-button {
+        display: block;
+        background: transparent;
+        color: #a0a0a0;
+        border-color: #92793c;
+        padding: 7px;
+        width: 71px;
+        margin-top: 42px;
+        margin-left: 37px;
+        border-top: none !important;
+        border-left: none;
+        border-right: none;
+    }
+    .choice-container {  
+        margin-top: 65px;  
+     }
 }
 
 /* Portrait */
@@ -145,6 +265,37 @@ and (orientation: portrait) {
         margin: 21px !important;
        
     }
+    .center-line {
+        margin-left: 0%;
+        border: solid #2f2f2f;
+         height: 0px; 
+        width: 70%;
+        border-width: 0.5px;
+         margin-bottom: 0px; 
+        margin-top: 49px;
+    }
+    .search-img {
+        height: 50px;
+        width: 46px;
+        margin-top: 38px;
+        margin-left: 0px;
+    }
+    .search-button {
+        display: block;
+        background: transparent;
+        color: #a0a0a0;
+        border-color: #92793c;
+        padding: 7px;
+        width: 71px;
+        margin-top: 42px;
+        margin-left: 37px;
+        border-top: none !important;
+        border-left: none;
+        border-right: none;
+    }
+    .choice-container {  
+        margin-top: 65px;  
+     }
 
 }
 
@@ -168,6 +319,37 @@ and (orientation: landscape) {
         margin: 21px !important;
        
     }
+    .center-line {
+        margin-left: 0%;
+        border: solid #2f2f2f;
+         height: 0px; 
+        width: 70%;
+        border-width: 0.5px;
+         margin-bottom: 0px; 
+        margin-top: 49px;
+    }
+    .search-img {
+        height: 50px;
+        width: 46px;
+        margin-top: 38px;
+        margin-left: 0px;
+    }
+    .search-button {
+        display: block;
+        background: transparent;
+        color: #a0a0a0;
+        border-color: #92793c;
+        padding: 7px;
+        width: 71px;
+        margin-top: 42px;
+        margin-left: 37px;
+        border-top: none !important;
+        border-left: none;
+        border-right: none;
+    }
+    .choice-container {  
+        margin-top: 65px;  
+     }
 }
 
 /* ----------- iPhone X ----------- */
