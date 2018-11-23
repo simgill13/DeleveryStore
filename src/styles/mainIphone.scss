@@ -63,7 +63,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
         margin-left: -44px;
     }
     .choice-container {  
-       margin-top: 65px;  
+       margin-top: 65px; 
+       margin-bottom: 100px; 
     }
     .center-line {
         margin-left: 0%;
@@ -75,10 +76,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
         margin-top: 49px;
     }
     .search-img {
-        height: 50px;
-        width: 46px;
+        height: 30px;
+        width: 26px;
         margin-top: 38px;
-        margin-left: 0px;
+        margin-left: -18px;
     }
     .search-button {
         display: block;
@@ -89,6 +90,25 @@ and (-webkit-min-device-pixel-ratio: 2) {
         width: 71px;
         margin-top: 42px;
         margin-left: 37px;
+        border-top: none !important;
+        border-left: none;
+        border-right: none;
+    }
+    .user-img {
+        height: 50px;
+        width: 46px;
+        margin-top: 38px;
+        margin-left: 0px;
+    }
+    .user-button {
+        display: block;
+        background: transparent;
+        color: #a0a0a0;
+        border-color: #92793c;
+        padding: 7px;
+        width: 71px;
+        margin-top: 42px;
+        margin-left: 43px;
         border-top: none !important;
         border-left: none;
         border-right: none;
@@ -120,10 +140,10 @@ and (orientation: portrait) {
         margin-top: 49px;
     }
     .search-img {
-        height: 50px;
-        width: 46px;
+        height: 30px;
+        width: 26px;
         margin-top: 38px;
-        margin-left: 0px;
+        margin-left: -18px;
     }
     .search-button {
         display: block;
@@ -139,8 +159,28 @@ and (orientation: portrait) {
         border-right: none;
     }
     .choice-container {  
-        margin-top: 65px;  
-     }
+        margin-top: 65px;
+        margin-bottom: 100px;  
+    }
+    .user-img {
+        height: 50px;
+        width: 46px;
+        margin-top: 38px;
+        margin-left: 0px;
+    }
+    .user-button {
+        display: block;
+        background: transparent;
+        color: #a0a0a0;
+        border-color: #92793c;
+        padding: 7px;
+        width: 71px;
+        margin-top: 42px;
+        margin-left: 43px;
+        border-top: none !important;
+        border-left: none;
+        border-right: none;
+    }
 }
 
 /* Landscape */
@@ -167,10 +207,10 @@ and (orientation: landscape) {
         margin-top: 49px;
     }
     .search-img {
-        height: 50px;
-        width: 46px;
+        height: 30px;
+        width: 26px;
         margin-top: 38px;
-        margin-left: 0px;
+        margin-left: -18px;
     }
     .search-button {
         display: block;
@@ -186,8 +226,28 @@ and (orientation: landscape) {
         border-right: none;
     }
     .choice-container {  
-        margin-top: 65px;  
-     }
+        margin-top: 65px;
+        margin-bottom: 100px;  
+    }
+    .user-img {
+        height: 50px;
+        width: 46px;
+        margin-top: 38px;
+        margin-left: 0px;
+    }
+    .user-button {
+        display: block;
+        background: transparent;
+        color: #a0a0a0;
+        border-color: #92793c;
+        padding: 7px;
+        width: 71px;
+        margin-top: 42px;
+        margin-left: 43px;
+        border-top: none !important;
+        border-left: none;
+        border-right: none;
+    }
 
 }
 
@@ -222,10 +282,10 @@ and (-webkit-min-device-pixel-ratio: 3) {
         margin-top: 49px;
     }
     .search-img {
-        height: 50px;
-        width: 46px;
+        height: 30px;
+        width: 26px;
         margin-top: 38px;
-        margin-left: 0px;
+        margin-left: -18px;
     }
     .search-button {
         display: block;
@@ -241,8 +301,28 @@ and (-webkit-min-device-pixel-ratio: 3) {
         border-right: none;
     }
     .choice-container {  
-        margin-top: 65px;  
-     }
+        margin-top: 65px;
+        margin-bottom: 100px;  
+    }
+    .user-img {
+        height: 50px;
+        width: 46px;
+        margin-top: 38px;
+        margin-left: 0px;
+    }
+    .user-button {
+        display: block;
+        background: transparent;
+        color: #a0a0a0;
+        border-color: #92793c;
+        padding: 7px;
+        width: 71px;
+        margin-top: 42px;
+        margin-left: 43px;
+        border-top: none !important;
+        border-left: none;
+        border-right: none;
+    }
 }
 
 /* Portrait */
@@ -275,10 +355,10 @@ and (orientation: portrait) {
         margin-top: 49px;
     }
     .search-img {
-        height: 50px;
-        width: 46px;
+        height: 30px;
+        width: 26px;
         margin-top: 38px;
-        margin-left: 0px;
+        margin-left: -18px;
     }
     .search-button {
         display: block;
@@ -294,8 +374,28 @@ and (orientation: portrait) {
         border-right: none;
     }
     .choice-container {  
-        margin-top: 65px;  
+        margin-top: 65px; 
+        margin-bottom: 100px; 
      }
+     .user-img {
+        height: 50px;
+        width: 46px;
+        margin-top: 38px;
+        margin-left: 0px;
+    }
+    .user-button {
+        display: block;
+        background: transparent;
+        color: #a0a0a0;
+        border-color: #92793c;
+        padding: 7px;
+        width: 71px;
+        margin-top: 42px;
+        margin-left: 43px;
+        border-top: none !important;
+        border-left: none;
+        border-right: none;
+    }
 
 }
 
@@ -329,10 +429,10 @@ and (orientation: landscape) {
         margin-top: 49px;
     }
     .search-img {
-        height: 50px;
-        width: 46px;
+        height: 30px;
+        width: 26px;
         margin-top: 38px;
-        margin-left: 0px;
+        margin-left: -18px;
     }
     .search-button {
         display: block;
@@ -348,8 +448,28 @@ and (orientation: landscape) {
         border-right: none;
     }
     .choice-container {  
-        margin-top: 65px;  
+        margin-top: 65px;
+        margin-bottom: 100px;  
      }
+     .user-img {
+        height: 50px;
+        width: 46px;
+        margin-top: 38px;
+        margin-left: 0px;
+    }
+    .user-button {
+        display: block;
+        background: transparent;
+        color: #a0a0a0;
+        border-color: #92793c;
+        padding: 7px;
+        width: 71px;
+        margin-top: 42px;
+        margin-left: 43px;
+        border-top: none !important;
+        border-left: none;
+        border-right: none;
+    }
 }
 
 /* ----------- iPhone X ----------- */
