@@ -49,7 +49,7 @@ class App extends Component {
                   <div className='center-line'> 
                   </div>
                   <div className='browse-option'> 
-                  <img className='search-img' src={require('https://res.cloudinary.com/sds-images/image/upload/v1542949699/search_zzt1ve.png')} />
+                  <img className='search-img' src={'https://res.cloudinary.com/sds-images/image/upload/v1542949699/search_zzt1ve.png'} />
                     <button className='search-button'> 
                       Search
                     </button>
