@@ -59,12 +59,12 @@ and (orientation: landscape) {
 and (min-device-width: 375px) 
 and (max-device-width: 667px) 
 and (-webkit-min-device-pixel-ratio: 2) { 
+    
     .location-search-input{
         margin-left: -44px;
     }
     .choice-container {  
        margin-top: 65px; 
-       margin-bottom: 100px; 
     }
     .center-line {
         margin-left: 0%;
@@ -112,6 +112,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
         border-top: none !important;
         border-left: none;
         border-right: none;
+    }
+    .image-container {
+        height: 120vh;
+        width: 100vw;
+        background-image: linear-gradient(to top, #000000 0%, #000000 52%, #000000 100%);
     }
 
 }
@@ -122,6 +127,7 @@ and (min-device-width: 375px)
 and (max-device-width: 667px) 
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) { 
+    
     .location-search-input{
         margin-left: -44px;
     }
@@ -160,7 +166,6 @@ and (orientation: portrait) {
     }
     .choice-container {  
         margin-top: 65px;
-        margin-bottom: 100px;  
     }
     .user-img {
         height: 50px;
@@ -180,6 +185,11 @@ and (orientation: portrait) {
         border-top: none !important;
         border-left: none;
         border-right: none;
+    }
+    .image-container {
+        height: 120vh;
+        width: 100vw;
+        background-image: linear-gradient(to top, #000000 0%, #000000 52%, #000000 100%);
     }
 }
 
@@ -189,6 +199,7 @@ and (min-device-width: 375px)
 and (max-device-width: 667px) 
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) { 
+   
     .location-search-input{
         margin-left: -44px;
     }
@@ -226,8 +237,7 @@ and (orientation: landscape) {
         border-right: none;
     }
     .choice-container {  
-        margin-top: 65px;
-        margin-bottom: 100px;  
+        margin-top: 65px; 
     }
     .user-img {
         height: 50px;
@@ -247,6 +257,11 @@ and (orientation: landscape) {
         border-top: none !important;
         border-left: none;
         border-right: none;
+    }
+    .image-container {
+        height: 120vh;
+        width: 100vw;
+        background-image: linear-gradient(to top, #000000 0%, #000000 52%, #000000 100%);
     }
 
 }
@@ -258,6 +273,7 @@ and (orientation: landscape) {
 and (min-device-width: 414px) 
 and (max-device-width: 736px) 
 and (-webkit-min-device-pixel-ratio: 3) { 
+   
     .addressSearchContainer {
         
         top: 31%;
@@ -301,8 +317,7 @@ and (-webkit-min-device-pixel-ratio: 3) {
         border-right: none;
     }
     .choice-container {  
-        margin-top: 65px;
-        margin-bottom: 100px;  
+        margin-top: 65px;  
     }
     .user-img {
         height: 50px;
@@ -323,6 +338,11 @@ and (-webkit-min-device-pixel-ratio: 3) {
         border-left: none;
         border-right: none;
     }
+    .image-container {
+        height: 120vh;
+        width: 100vw;
+        background-image: linear-gradient(to top, #000000 0%, #000000 52%, #000000 100%);
+    }
 }
 
 /* Portrait */
@@ -331,6 +351,7 @@ and (min-device-width: 414px)
 and (max-device-width: 736px) 
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: portrait) { 
+    
     .addressSearchContainer {
       
         top: 31%;
@@ -375,7 +396,7 @@ and (orientation: portrait) {
     }
     .choice-container {  
         margin-top: 65px; 
-        margin-bottom: 100px; 
+       
      }
      .user-img {
         height: 50px;
@@ -396,6 +417,11 @@ and (orientation: portrait) {
         border-left: none;
         border-right: none;
     }
+    .image-container {
+        height: 120vh;
+        width: 100vw;
+        background-image: linear-gradient(to top, #000000 0%, #000000 52%, #000000 100%);
+    }
 
 }
 
@@ -405,6 +431,7 @@ and (min-device-width: 414px)
 and (max-device-width: 736px) 
 and (-webkit-min-device-pixel-ratio: 3)
 and (orientation: landscape) { 
+    
     .addressSearchContainer {
    
         top: 31%;
@@ -449,7 +476,7 @@ and (orientation: landscape) {
     }
     .choice-container {  
         margin-top: 65px;
-        margin-bottom: 100px;  
+        
      }
      .user-img {
         height: 50px;
@@ -470,7 +497,37 @@ and (orientation: landscape) {
         border-left: none;
         border-right: none;
     }
+    .image-container {
+        height: 120vh;
+        width: 100vw;
+        background-image: linear-gradient(to top, #000000 0%, #000000 52%, #000000 100%);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ----------- iPhone X ----------- */
 
