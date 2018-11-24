@@ -2,6 +2,7 @@ import {render}                                     from "react-dom";
 import React                                        from "react";
 import {Provider}                                   from "react-redux";
 import App                                          from "components/views/App";
+import Row                                          from "components/views/Row";
 import store                                        from "store";
 // import 'semantic-ui-css/semantic.min.css'; 
 import {
@@ -19,7 +20,7 @@ render(
         <Router>
             <Switch>
                 <Route exact path="/" component={App} />
-                {/* <Route path="/about" component={Second} /> */}
+                <Route path="/row" component={Row} />
             </Switch>
         </Router>
     </Provider>,
