@@ -1,7 +1,7 @@
 import {render}                                     from "react-dom";
 import React                                        from "react";
 import {Provider}                                   from "react-redux";
-import App                                          from "components/views/App";
+import App                                          from "components/containers/Appcontainer";
 import Row                                          from "components/views/Row";
 import store                                        from "store";
 // import 'semantic-ui-css/semantic.min.css'; 

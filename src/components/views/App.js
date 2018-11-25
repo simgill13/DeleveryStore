@@ -17,6 +17,7 @@ class App extends Component {
 
   componentDidMount(){
     this.imageContainer.current.addEventListener('mousedown',this.loginClick,false)
+    this.props.getVacations()  
   }
 
   loginClick = (e) => {
@@ -86,7 +87,5 @@ class App extends Component {
     );
   }
 }
-
-
 
 export default App;

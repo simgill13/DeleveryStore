@@ -6,7 +6,11 @@ export const userName = (name) => ({
 
 
 
-export const fetchUser = (googleId,name,email,profilePicURL,accessToken,expiresAt) => dispatch => {
-    console.log("fetching user data...");
-   
+export const fetchVacation = () => dispatch => {
+  console.log("fetching vacation data...");
+  fetch(`/api/vacation`)
+  .then(response => response.json())
+  .then(json => {
+    console.log("--->", json)   
+  })
 }

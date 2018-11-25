@@ -1,5 +1,6 @@
-import React,{ Component ,Fragment}                from "react";
-import {connect}                          from "react-redux";
+import React,{ Component ,Fragment}         from "react";
+import {connect}                            from "react-redux";
+import * as action                        from 'actions/action'
 import App from 'components/views/App'
 
 
@@ -14,8 +15,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        changeName: (name) => {
-            dispatch(userName(name));
+        getVacations: () => {
+            dispatch(action.fetchVacation());
         }
     };
 };
