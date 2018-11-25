@@ -1,7 +1,7 @@
 import React,{ Component,Fragment }                from "react";
+import { Header,Form,Label, Modal,Icon ,Dimmer,Search,Grid,Divider,Button, Loader, Image, Segment,Input } from 'semantic-ui-react'
 import 'styles/app.scss';
 import 'styles/mainIphone.scss'
-import { Header, Icon ,Dimmer,Search,Grid,Divider,Button, Loader, Image, Segment,Input } from 'semantic-ui-react'
 
 
 class App extends Component {
@@ -11,7 +11,9 @@ class App extends Component {
     this.userIcon = 'https://res.cloudinary.com/sds-images/image/upload/v1542955431/user_wggsf3.png';
     this.searchIcon = 'https://res.cloudinary.com/sds-images/image/upload/v1542949699/search_zzt1ve.png';
     this.state = {
-      loginbtn:false  
+      loginbtn:false,
+      signupModal:false,
+      signUpForm:{} 
     }
   }
 
@@ -32,7 +34,78 @@ class App extends Component {
       } 
     }
   }
+
+  modalClose = () => {
+    this.setState({signupModal:false})
+  }
+
+  updateForm = (e) => {
+    switch(e.target.id) {
+      case 'firstName':
+        this.setState({signUpForm:{...this.state.signUpForm, firstName:e.target.value}})
+          break;
+      case 'lastName':
+      this.setState({signUpForm:{...this.state.signUpForm, lastName:e.target.value}})
+          break;
+      case 'email':
+      this.setState({signUpForm:{...this.state.signUpForm, email:e.target.value}})
+          break;
+      case 'password':
+      this.setState({signUpForm:{...this.state.signUpForm, password:e.target.value}})
+          break;
+      default:
+          null
+    }
+  }
    
+  signUpModal = () => {
+    return (
+      <Modal dimmer={'blurring'} open={this.state.signupModal} onClose={this.modalClose}>
+        <Modal.Header>Select a Photo</Modal.Header>
+        <Modal.Content image>
+          <Image
+            wrapped
+            size='medium'
+            src='https://react.semantic-ui.com/images/avatar/large/rachel.png'
+          />
+          <Modal.Description className='signup-form-description'>
+            <button> choose </button>
+            <Form>
+              <Form.Field>
+                <input id='firstName' type='text' placeholder='First name' onChange={(e) => this.updateForm(e)} />
+              </Form.Field>
+              <Divider />
+              <Form.Field>
+                <input id='lastName' type='text' placeholder='Last Name' onChange={(e) => this.updateForm(e)}/>
+              </Form.Field>
+              <Divider />
+          
+              <Form.Field inline>
+                <input id='email' type='text' placeholder='Email'onChange={(e) => this.updateForm(e)} />
+              </Form.Field>
+              <Divider />
+          
+              <Form.Field inline>
+                <input id='password' type='password' placeholder='Password' onChange={(e) => this.updateForm(e)} />
+              </Form.Field>
+          </Form>
+          </Modal.Description>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button color='black' onClick={this.modalClose}>
+            Cancle
+          </Button>
+          <Button
+            positive
+            icon='checkmark'
+            labelPosition='right'
+            content="Yep, that's me"
+            onClick={this.modalClose}
+          />
+        </Modal.Actions>
+      </Modal>
+    )
+  }
   
 
   render() {
@@ -40,6 +113,12 @@ class App extends Component {
     return (
         <Fragment>
           <div ref={this.imageContainer} className='image-container'>
+            <div className='sign-up-container'>
+              <button onClick={()=> this.setState({signupModal:!this.state.signUpModal})} className='signup-button'> 
+                <Icon disabled name='add user' />
+              </button>
+            </div>
+            {this.signUpModal()}
             <div className='logo-container animated fadeIn'> 
               <h1 className='logo-b'> B </h1>
               <p className='bunzee-tagline'> Delivering high quality goods</p>
@@ -56,6 +135,7 @@ class App extends Component {
                     <Input 
                     placeholder='Email'
                     className='form-input'
+                    autoComplete="username"
                     /> 
                   </label>
                   <br/>
@@ -65,6 +145,7 @@ class App extends Component {
                     type='password'
                     placeholder='Password'
                     className='form-input'
+                    autoComplete="current-password"
                     />
                   </label>
                   <br/>

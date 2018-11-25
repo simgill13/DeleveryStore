@@ -23,7 +23,7 @@ body{
 .logo-container{
     width: 100%;
     position: absolute;
-    margin-top: 10%;
+    margin-top: 5%;
     animation-duration: 3s;
 }
 .logo-b{
@@ -81,7 +81,7 @@ input:focus{
 .center-line{
     margin-left: 34px;
     border: solid #2f2f2f;
-    height: 145px;
+    height: 166px;
     border-width: 0.5px;
     margin-bottom: -10px;
 }
@@ -152,4 +152,32 @@ input:focus{
 }
 .login-hide{
     display: none
+}
+.sign-up-container{
+    width:100%;
+    text-align: right;
+}
+
+.signup-button{
+    margin-top: 19px;
+    margin-right: 20px;
+    background: transparent;
+    color: #dedede;
+    border-color: #92793c;
+    padding: 7px;
+    width: 71px;
+    border-top: none !important;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    font-size: 16px;
+}
+.signup-button:hover{
+    cursor: pointer;
+}
+.signup-button:focus, input:focus{
+    outline: none;
+}
+.signup-form-description{
+    width: 100% !important;
 }
