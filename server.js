@@ -16,18 +16,12 @@ app.use(bodyParser.urlencoded({ extended: false })) //try true
 
 
 
-
-
-
-
 app.get(/^(?!\/api(\/|$))/, (req, res) => {
-    res.sendFile(indexPath)
+  process.env.NODE_ENV === 'development' ? res.json({msg:'Dev-server'}) :  res.sendFile(indexPath); 
 });
 
-
-
 app.get('/api/test', (req, res) => {
-    res.json({Hello:'test'})
+    res.json({Hello:'newtest'})
 });
 
 app.get('/api/vacation', (req, res) => {
@@ -63,6 +57,7 @@ runServer = (port) => {
         app.listen(port, () => {
             resolve();
             console.log(`Server listening on ${port}`)
+            
         }).on('error', reject);
       });  
   });
@@ -70,7 +65,7 @@ runServer = (port) => {
 
 
 if (require.main === module) {
-    runServer(port);
+   process.env.NODE_ENV === 'development' ? runServer(3000)  : runServer(port);  
 }
 
 module.exports = {app,runServer};

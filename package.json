@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --mode=development",
+    "dev-server": "  webpack-dev-server --mode=development",
+    "dev": "concurrently --kill-others \"npm run server\" \"npm run dev-server\"",    
     "build": "webpack --mode=production",
     "start": "node server.js",
+    "server": "NODE_ENV=development node server.js ",
     "heroku-postbuild": " npm run build"
   },
   "keywords": [
@@ -32,6 +34,7 @@
     "classnames": "^2.2.6",
     "clean-webpack-plugin": "^0.1.19",
     "compression-webpack-plugin": "^2.0.0",
+    "concurrently": "^4.1.0",
     "css-loader": "^1.0.0",
     "dotenv": "^6.1.0",
     "file-loader": "^2.0.0",
