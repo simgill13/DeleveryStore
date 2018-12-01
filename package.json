@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "  webpack-dev-server --mode=development",
-    "dev": "concurrently --kill-others \"npm run server\" \"npm run dev-server\"",    
+    "dev": "concurrently --kill-others \"npm run server\" \"npm run dev-server\"",
     "build": "webpack --mode=production",
     "start": "node server.js",
     "server": "NODE_ENV=development node server.js ",
@@ -48,6 +48,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-dropzone": "^7.0.1",
     "react-places-autocomplete": "^7.2.0",
     "react-redux": "^5.1.0",
     "react-router": "^4.3.1",

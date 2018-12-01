@@ -1,5 +1,6 @@
 import React,{ Component,Fragment }                from "react";
-import { Header,Form,Label, Modal,Icon ,Dimmer,Search,Grid,Divider,Button, Loader, Image, Segment,Input } from 'semantic-ui-react'
+import { Header,Form,Label, Modal,Icon ,Dimmer,Search,Grid,Divider,Button, Loader, Image, Segment,Input } from 'semantic-ui-react';
+import Dropzone from 'react-dropzone'
 import 'styles/app.scss';
 import 'styles/mainIphone.scss'
 
@@ -13,7 +14,8 @@ class App extends Component {
     this.state = {
       loginbtn:false,
       signupModal:false,
-      signUpForm:{} 
+      signUpForm:{},
+      imgSizeErr:''
     }
   }
 
@@ -57,6 +59,23 @@ class App extends Component {
           null
     }
   }
+
+  createBase64 = (files, cb) => {
+    try {
+        const reader = new FileReader();
+        const blob = files[0];
+        reader.onload = () => {
+            const base64data = reader.result;
+            cb(base64data, blob.name);
+        };
+        reader.readAsDataURL(blob);
+    } catch (e) {
+        this.setState({ imgSizeErr: 'Images only |  500kb or less' });
+        setTimeout(() => {
+            this.setState({ imgSizeErr: '' });
+        }, 3000);
+    }
+}
    
   signUpModal = () => {
     return (
@@ -68,8 +87,22 @@ class App extends Component {
             size='medium'
             src='https://react.semantic-ui.com/images/avatar/large/rachel.png'
           />
+          <Dropzone
+              style={{ height: '299px', width: '299px', color: 'white',position:'absolute',zIndex:'100'}}
+              multiple={false}
+              maxSize={500000}
+              disabled={!!this.state.imgSizeErr}
+              accept="image/*"
+              onDrop={files => this.createBase64(files, (data, name) => {
+                  if (data) {
+                      
+                  }
+              })}
+            >
+              <p style={{ textAlign: 'center', fontSize: '9px', marginTop: '5px' }}>Drop An Image. </p>
+          </Dropzone>
           <Modal.Description className='signup-form-description'>
-            <button> choose </button>
+            
             <Form>
               <Form.Field>
                 <input id='firstName' type='text' placeholder='First name' onChange={(e) => this.updateForm(e)} />
