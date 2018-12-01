@@ -9,13 +9,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.imageContainer = React.createRef();
+    this.sampleUserImg ='https://react.semantic-ui.com/images/avatar/large/rachel.png';
     this.userIcon = 'https://res.cloudinary.com/sds-images/image/upload/v1542955431/user_wggsf3.png';
     this.searchIcon = 'https://res.cloudinary.com/sds-images/image/upload/v1542949699/search_zzt1ve.png';
     this.state = {
       loginbtn:false,
       signupModal:false,
       signUpForm:{},
-      imgSizeErr:''
+      imgSizeErr:'',
+      userselectedImg:'',
+      imgUploadError:'',
+      dropAnImageText:'Drop An Image'
     }
   }
 
@@ -62,21 +66,33 @@ class App extends Component {
 
   createBase64 = (files, cb) => {
     try {
-        const reader = new FileReader();
-        const blob = files[0];
-        reader.onload = () => {
-            const base64data = reader.result;
-            cb(base64data, blob.name);
-        };
+      const reader = new FileReader();
+      const blob = files[0];
+      reader.onload = () => {
+          const base64data = reader.result;
+          cb(base64data, blob.name);
+      };
+      if(blob){
         reader.readAsDataURL(blob);
+      }else{
+        throw({error:'Image upload no blob'}) 
+      }            
     } catch (e) {
-        this.setState({ imgSizeErr: 'Images only |  500kb or less' });
-        setTimeout(() => {
-            this.setState({ imgSizeErr: '' });
-        }, 3000);
+      this.setState({ 
+        imgSizeErr: 'Images only',
+        imgUploadError: e,
+        dropAnImageText:' Error ! Try Another Image'
+      }); 
+      setTimeout(() => {
+        this.setState({ 
+          dropAnImageText: 'Drop An Image',
+          imgSizeErr: '' 
+        });
+      }, 3000); 
     }
-}
-   
+  }
+
+      
   signUpModal = () => {
     return (
       <Modal dimmer={'blurring'} open={this.state.signupModal} onClose={this.modalClose}>
@@ -85,21 +101,20 @@ class App extends Component {
           <Image
             wrapped
             size='medium'
-            src='https://react.semantic-ui.com/images/avatar/large/rachel.png'
+            src={this.state.userselectedImg ? this.state.userselectedImg : this.sampleUserImg}
           />
           <Dropzone
-              style={{ height: '299px', width: '299px', color: 'white',position:'absolute',zIndex:'100'}}
+              className='dropzone'
               multiple={false}
-              maxSize={500000}
-              disabled={!!this.state.imgSizeErr}
+              maxSize={2000000}
               accept="image/*"
               onDrop={files => this.createBase64(files, (data, name) => {
                   if (data) {
-                      
+                      this.setState({userselectedImg:data})
                   }
               })}
             >
-              <p style={{ textAlign: 'center', fontSize: '9px', marginTop: '5px' }}>Drop An Image. </p>
+              <p className='drop-an-image'> {this.state.dropAnImageText} </p>
           </Dropzone>
           <Modal.Description className='signup-form-description'>
             
