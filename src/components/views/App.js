@@ -75,13 +75,14 @@ class App extends Component {
       if(blob){
         reader.readAsDataURL(blob);
       }else{
+        console.log('here')
         throw({error:'Image upload no blob'}) 
       }            
     } catch (e) {
       this.setState({ 
         imgSizeErr: 'Images only',
         imgUploadError: e,
-        dropAnImageText:' Error ! Try Another Image'
+        dropAnImageText:' Error ! Images only | 5MB max'
       }); 
       setTimeout(() => {
         this.setState({ 
@@ -106,7 +107,7 @@ class App extends Component {
           <Dropzone
               className='dropzone'
               multiple={false}
-              maxSize={2000000}
+              maxSize={5000000}
               accept="image/*"
               onDrop={files => this.createBase64(files, (data, name) => {
                   if (data) {
