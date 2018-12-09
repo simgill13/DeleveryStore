@@ -15,8 +15,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        getVacations: () => {
-            dispatch(action.fetchVacation());
+        signup: (userobj) => {
+            dispatch(action.createUser(userobj));
         }
     };
 };
