@@ -25,6 +25,10 @@ class App extends Component {
         email:null,
         password:null
       },
+      login:{
+        email:null,
+        password:null
+      },
       imgSizeErr:'',
       userselectedImg:'',
       imgUploadError:'',
@@ -37,8 +41,6 @@ class App extends Component {
     this.imageContainer.current.addEventListener('mousedown',this.loginClick,false)  
   }
 
-  componentDidUpdate(){ 
-  }
 
   loginClick = (e) => {
     const event = e || null
@@ -53,9 +55,8 @@ class App extends Component {
     }
   }
 
-  modalClose = () => {
-    this.setState({signupModal:false})
-  }
+  modalClose = () => this.setState({signupModal:false})
+  
 
   updateForm = (e) => {
     switch(e.target.id) {
@@ -122,10 +123,8 @@ class App extends Component {
     }
   }
 
-  formSubmit = () => {
-    console.log('here',this.state.signUpForm)
-    this.props.signup(this.state.signUpForm)
-  }
+  formSubmit = () => this.props.signup(this.state.signUpForm)
+  
 
       
   signUpModal = () => {
@@ -145,9 +144,7 @@ class App extends Component {
               maxSize={5000000}
               accept="image/*"
               onDrop={files => this.createBase64(files, (data, name) => {
-                  if (data) {
-                      this.setState({signUpForm:{...this.state.signUpForm, userPhoto:data}})
-                  }
+                  if (data) this.setState({signUpForm:{...this.state.signUpForm, userPhoto:data}}) 
               })}
             >
               <p className='drop-an-image'> {this.state.dropAnImageText} </p>
@@ -222,6 +219,7 @@ class App extends Component {
                   <label className='labels'>
                     <br/>
                     <Input 
+                    onChange={(e) => this.setState({login:{...this.state.login, email:e.target.value}})}
                     placeholder='Email'
                     className='form-input'
                     autoComplete="username"
@@ -231,6 +229,7 @@ class App extends Component {
                   <label className='labels'>
                     <br/>
                     <Input 
+                    onChange={(e) => this.setState({login:{...this.state.login, password:e.target.value}})}
                     type='password'
                     placeholder='Password'
                     className='form-input'
@@ -238,7 +237,13 @@ class App extends Component {
                     />
                   </label>
                   <br/>
-                  <button className='login-button'> 
+                  <button 
+                  className='login-button' 
+                  onClick={(e)=> {
+                  e.preventDefault()
+                  this.props.login(this.state.login)
+                  }}
+                  > 
                     Login
                   </button>
                 </form> 

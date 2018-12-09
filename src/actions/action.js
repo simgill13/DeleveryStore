@@ -25,7 +25,7 @@ export const userLogin = (userObj) => dispatch => {
       console.log('returned login obj', json)     
   })
   .catch(err => {
-      console.log(" invalid credentials",err)   
+      console.log(err)   
   })
 }
 
@@ -43,13 +43,12 @@ export const createUser = (userobj) => dispatch => {
   })
   .then(response => response.json())
   .then(json => {
-    if(json){
-      // make a login req
-      console.log("FROM ACTION",json)
-      console.log('Loging in ')
+    if(json.message !== 'email is already taken'){
       let loginObj = json;
       loginObj.password = userobj.password
       dispatch(userLogin(loginObj));
+    }else{
+      console.log(json.message)
     }
   })
   .catch(err => {

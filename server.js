@@ -10,7 +10,7 @@ const BearerStrategy =                                                    requir
 const app =                                                               express()
 const mongoose =                                                          require('mongoose');
 const { User, Vacation } =                                                require('./models');
-const { createToken,getToken,verifytoken } =                              require('./middleware')
+const { createToken,getToken,verifytoken,validateUser } =                 require('./middleware')
 const port =                                                              (process.env.PORT || 8080)
 const indexPath =                                                         path.join(__dirname, './dist/index.html')
 const DATABASE_URL =                                                      process.env.DATABASE_URL ||
@@ -23,6 +23,7 @@ app.get(/^(?!\/api(\/|$))/, (req, res) => {
   process.env.NODE_ENV === 'development' ? res.json({ msg: 'Dev-server' }) : res.sendFile(indexPath);
 });
 app.use(passport.initialize());
+passport.use(validateUser);
 
 
 
@@ -30,16 +31,7 @@ app.use(passport.initialize());
 
 
 
-app.get('/api/vacation', (req, res) => {
-  Vacation
-    .find()
-    .exec()
-    .then(data => {
-      res.json(data)
-    })
-    .catch(console.error)
-}
-);
+
 
 
 app.post('/api/user/signup', (req, res) => {
@@ -74,50 +66,26 @@ app.post('/api/user/signup', (req, res) => {
 
 
 
-const validateUser = new BasicStrategy(
-  (email, password, callback) => {
-    let user;
-    User
-    .findOne({email})
-    .exec()
-    .then(_user => {
-      user = _user;
-      if (!user) {
-        return callback(null, false, "Incorrect Email");
-      }
-      user.validatePassword(password)
-    
-    .then(isValid => {
-      if (!isValid) {
-        return callback(null, false, "Incorrect password");
-      }
-      else {
-        return callback(null, user);
-      }
-    });
-  })
-});
 
-passport.use(validateUser);
+
 
 app.post('/api/user/login', passport.authenticate('basic', {session: false}), (req, res) => {
-  console.log('REQ+++++',req)
-  console.log('+++++++++',req.body)
   const email = req.body.email
+  if(req.user){
+    if(req.user.error){
+      res.status(401).json({message: req.user.error});
+    }else{
+      const user = req.user
+
+      //create token
+      res.status(200).json({
+        user:user.apiRepr(),
+        token:'testtoken'
+      })
+    }
+  }
   
-  User
-    .findOne({ email })
-    .then(user => {
-      if (!user) {
-        return res.status(404).json({message: 'Invalid Credentials'});
-      } else {
-       
-        return res.status(200).json(user.apiRepr());
-      }
-    })
-    .catch(err => {
-      res.status(500).json({message: 'Internal server error'})
-    });
+ 
 })
 
 

@@ -17,6 +17,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         signup: (userobj) => {
             dispatch(action.createUser(userobj));
+        },
+        login: (userobj) => {
+            dispatch(action.userLogin(userobj));
         }
     };
 };

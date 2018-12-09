@@ -1,6 +1,36 @@
 const express = require('express')
 const app = express()
 const jwt = require('jsonwebtoken')
+const {BasicStrategy} = require('passport-http');
+const mongoose =   require('mongoose');
+const { User } =  require('./models');
+
+
+
+validateUser = new BasicStrategy(
+    (email, password, callback) => {
+      let user;
+      User
+      .findOne({email})
+      .exec()
+      .then(_user => {
+        user = _user;
+        if (!user) {
+          return callback(null, {error:'Incorrect email'});
+        }
+        user.validatePassword(password)
+
+      .then(isValid => {
+        if (!isValid) {
+          return callback(null, {error:'Incorrect password'});
+        }
+        else {
+          return callback(null, user);
+        }
+      });
+    })
+});
+
 
 createToken = (req, res, next) => {
     const user = req.body.userobj;
@@ -38,4 +68,4 @@ verifytoken = (req, res, next) => {
     })
 }
 
-  module.exports = {createToken,getToken,verifytoken }
+  module.exports = {createToken,getToken,verifytoken,validateUser }
