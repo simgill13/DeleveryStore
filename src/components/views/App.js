@@ -13,6 +13,7 @@ class App extends Component {
     this.lastname= React.createRef();
     this.email= React.createRef();
     this.password= React.createRef();
+    this.blogo= 'https://res.cloudinary.com/sds-images/image/upload/v1544404169/b_us0rrn.png'
     this.sampleUserImg ='https://react.semantic-ui.com/images/avatar/large/rachel.png';
     this.userIcon = 'https://res.cloudinary.com/sds-images/image/upload/v1542955431/user_wggsf3.png';
     this.searchIcon = 'https://res.cloudinary.com/sds-images/image/upload/v1542949699/search_zzt1ve.png';
@@ -206,7 +207,7 @@ class App extends Component {
             </div>
             {this.signUpModal()}
             <div className='logo-container animated fadeIn'> 
-              <h1 className='logo-b'>  <img className='b-logo' src={require('images/b.png')} /> </h1>
+              <h1 className='logo-b'>  <img className='b-logo' src={this.blogo} /> </h1>
               <p className='bunzee-tagline'> Delivering high quality goods</p>
               <div className='choice-container'>
               <div className={ loginbtn ? 'login-hide' :'browse-option animated fadeIn'} onClick={()=> this.loginClick()}> 
