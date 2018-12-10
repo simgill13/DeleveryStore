@@ -69,23 +69,10 @@ app.post('/api/user/signup', (req, res) => {
 
 
 
-app.post('/api/user/login', passport.authenticate('basic', {session: false}), (req, res) => {
-  const email = req.body.email
-  if(req.user){
-    if(req.user.error){
-      res.status(401).json({message: req.user.error});
-    }else{
-      const user = req.user
-
-      //create token
-      res.status(200).json({
-        user:user.apiRepr(),
-        token:'testtoken'
-      })
-    }
-  }
+app.post('/api/user/login', passport.authenticate('basic', {session: false}),createToken, (req, res) => {
+  console.log('made it all the way through')
+  res.status(401).json({final: req.token});
   
- 
 })
 
 

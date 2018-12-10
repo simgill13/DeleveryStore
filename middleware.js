@@ -33,15 +33,21 @@ validateUser = new BasicStrategy(
 
 
 createToken = (req, res, next) => {
-    const user = req.body.userobj;
-    jwt.sign({ user }, 'secret', (err, token) => {
-      if (err) {
-        res.sendStatus(403)
-      } else {
-        req.token = token
-        next()
-      }
-    })
+    if(req.user){
+        if(req.user.error){
+          res.status(401).json({message: req.user.error});
+        }else{
+          const user = req.user
+          jwt.sign({ user }, 'secret', (err, token) => {
+            if (err) {
+              res.sendStatus(403)
+            } else {
+              req.token = token
+              next()
+            }
+          })
+        }
+    }
 }
   
 getToken = (req, res, next) => {

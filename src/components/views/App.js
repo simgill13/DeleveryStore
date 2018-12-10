@@ -206,7 +206,7 @@ class App extends Component {
             </div>
             {this.signUpModal()}
             <div className='logo-container animated fadeIn'> 
-              <h1 className='logo-b'> B </h1>
+              <h1 className='logo-b'>  <img className='b-logo' src={require('images/b.png')} /> </h1>
               <p className='bunzee-tagline'> Delivering high quality goods</p>
               <div className='choice-container'>
               <div className={ loginbtn ? 'login-hide' :'browse-option animated fadeIn'} onClick={()=> this.loginClick()}> 
@@ -220,6 +220,7 @@ class App extends Component {
                     <br/>
                     <Input 
                     onChange={(e) => this.setState({login:{...this.state.login, email:e.target.value}})}
+                    prefix={<Icon type="lock" style={{ color: 'white' }} />}
                     placeholder='Email'
                     className='form-input'
                     autoComplete="username"
