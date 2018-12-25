@@ -28,7 +28,7 @@ passport.use(validateUser);
 
 
 
-
+ 
 
 
 
@@ -70,11 +70,22 @@ app.post('/api/user/signup', (req, res) => {
 
 
 app.post('/api/user/login', passport.authenticate('basic', {session: false}),createToken, (req, res) => {
-  console.log('made it all the way through')
-  res.status(401).json({final: req.token});
-  
+  res.status(200).json({
+    token: req.token,
+    userobj:{
+      firstName:req.user.firstName,
+      lastName:req.user.lastName,
+      userAvtar:req.user.userAvtar
+    }
+  });  
 })
 
+
+app.post('/api/user/auth/check', getToken, verifytoken , (req, res) => {
+  res.status(200).json({
+    auth: true,  
+  });  
+})
 
 
 

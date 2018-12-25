@@ -7,6 +7,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CompressionPlugin = require('compression-webpack-plugin');
 const MinifyPlugin = require("babel-minify-webpack-plugin");
+const PrettierPlugin = require("prettier-webpack-plugin");
 const path = require('path');
 
 
@@ -160,6 +161,14 @@ let config = {
       cache: path.resolve(__dirname, 'dist'),
       algorithm: 'gzip'
     }),
+    new PrettierPlugin({
+      printWidth: 200,               
+      tabWidth: 2,                 
+      useTabs: false,             
+      semi: true,                   
+      encoding: 'utf-8',           
+      extensions: [ ".js" ] 
+    })
   ]
 };
 

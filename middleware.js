@@ -36,16 +36,17 @@ createToken = (req, res, next) => {
     if(req.user){
         if(req.user.error){
           res.status(401).json({message: req.user.error});
-        }else{
-          const user = req.user
-          jwt.sign({ user }, 'secret', (err, token) => {
-            if (err) {
-              res.sendStatus(403)
-            } else {
-              req.token = token
-              next()
-            }
-          })
+        }
+        else {
+            const user = req.user
+            jwt.sign({ user }, 'secretkey',{ expiresIn: "15m" }, (err, token) => {
+                if (err) {
+                    res.sendStatus(403)
+                }else {
+                    req.token = token
+                    next()
+                }
+            })
         }
     }
 }
@@ -65,8 +66,10 @@ getToken = (req, res, next) => {
   
 verifytoken = (req, res, next) => {
     const token = req.token
+
     jwt.verify(token, 'secretkey', (err, authData) => {
         if (err) {
+        res.statusMessage = err;
         res.sendStatus(403)
         } else {
         next()
