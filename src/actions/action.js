@@ -86,7 +86,7 @@ export const authCheck = (jwtToken, history) => dispatch => {
         }
       } else {
         history.replace({
-          pathname: "/row",
+          pathname: "/browse",
           state: {}
         });
       }

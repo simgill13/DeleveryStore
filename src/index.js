@@ -2,7 +2,7 @@ import { render } from "react-dom";
 import React from "react";
 import { Provider } from "react-redux";
 import Login from "components/containers/Logincontainer";
-import Row from "components/views/Row";
+import Browse from "components/views/Browse";
 import App from "components/containers/App";
 import store from "store";
 // import 'semantic-ui-css/semantic.min.css';
@@ -15,7 +15,7 @@ render(
         <Route exact path="/" component={App} />
         <Route path="/login" component={Login} />
         <Route path="/logout" component={Login} />
-        <Route path="/row" component={Row} />
+        <Route path="/browse" component={Browse} />
       </Switch>
     </Router>
   </Provider>,

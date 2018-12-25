@@ -20,7 +20,6 @@ class App extends Component {
     const { history } = this.props;
     const user = JSON.parse(localStorage.getItem("user"));
     if (user) {
-      this.props.authCheck(user.token, history);
       this.props.checktoken(user.token, history);
     } else {
       history.replace({
