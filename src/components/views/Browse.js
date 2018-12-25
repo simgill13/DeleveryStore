@@ -10,7 +10,9 @@ class Browse extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    console.log("this.props", this.props);
+  }
 
   render() {
     return <div className="row">Broswse Component</div>;

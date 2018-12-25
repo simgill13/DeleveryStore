@@ -5,7 +5,8 @@ import Login from "components/containers/Logincontainer";
 import Browse from "components/views/Browse";
 import App from "components/containers/App";
 import store from "store";
-// import 'semantic-ui-css/semantic.min.css';
+import { singleAuthCheck } from "actions/auth";
+
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 
 render(
@@ -15,7 +16,13 @@ render(
         <Route exact path="/" component={App} />
         <Route path="/login" component={Login} />
         <Route path="/logout" component={Login} />
-        <Route path="/browse" component={Browse} />
+        <Route
+          path="/browse"
+          render={props => {
+            singleAuthCheck();
+            return <Browse {...props} />;
+          }}
+        />
       </Switch>
     </Router>
   </Provider>,
