@@ -14,15 +14,27 @@ class Browse extends Component {
   }
 
   componentDidMount() {
-    console.log("this.props", this.props);
+    setTimeout(() => {
+      this.disableAnimation();
+    }, 3000);
   }
+  componentWillUnmount() {}
+
+  disableAnimation = () => {
+    this.setState({ animComplete: true });
+  };
 
   animation = () => {
-    return (
-      <Fragment>
-        <Loading />
-      </Fragment>
-    );
+    const { animComplete } = this.state;
+    if (!animComplete) {
+      return (
+        <Fragment>
+          <Loading />
+        </Fragment>
+      );
+    } else {
+      <Fragment />;
+    }
   };
 
   browse = () => {
@@ -44,6 +56,8 @@ class Browse extends Component {
           </div>
         </Fragment>
       );
+    } else {
+      return <Fragment> </Fragment>;
     }
   };
 
