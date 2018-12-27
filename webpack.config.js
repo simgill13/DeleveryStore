@@ -13,9 +13,9 @@ const path = require('path');
 
 
 let config = {
-
+   
     entry: {
-      index:'./src/index.js',
+      index: ["@babel/polyfill", "./src/index.js"],
       vendors:['react','react-dom','path']
     }, 
     output: {

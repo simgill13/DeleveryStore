@@ -1,0 +1,271 @@
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2) { 
+    
+    
+    .side-nav-container {
+        min-width: 0px; 
+        width: 100%;
+        display: block; 
+        height: 70px;
+        border: solid red;
+        overflow: none;
+    }
+    .side-nav-top {
+        display: inline-block;
+        width: 33.3%;
+        border: solid;
+        height: 70px;
+        vertical-align: top;
+    }
+    .side-nav-middle {
+        width: 33.3%;
+        border: solid;
+        display: inline-block;
+        height: 70px;
+        vertical-align: top;
+    }
+    .side-nav-bottom {
+        width: 33.3%;
+        height: 70px;
+        display: inline-block;
+        border: solid;
+        vertical-align: top;
+    }
+    .main-browse-container {
+        display: inline-block;
+        border: solid green;
+        height: 100vh;
+        width: 100%;
+    }
+
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) { 
+    .side-nav-container {
+        min-width: 0px; 
+        width: 100%;
+        display: block; 
+        height: 70px;
+        border: solid red;
+        overflow: none;
+    }
+    .side-nav-top {
+        display: inline-block;
+        width: 33.3%;
+        border: solid;
+        height: 70px;
+        vertical-align: top;
+    }
+    .side-nav-middle {
+        width: 33.3%;
+        border: solid;
+        display: inline-block;
+        height: 70px;
+        vertical-align: top;
+    }
+    .side-nav-bottom {
+        width: 33.3%;
+        height: 70px;
+        display: inline-block;
+        border: solid;
+        vertical-align: top;
+    }
+    .main-browse-container {
+        display: inline-block;
+        border: solid green;
+        height: 100vh;
+        width: 100%;
+    }
+    
+    
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 375px) 
+and (max-device-width: 667px) 
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) { 
+   
+    .side-nav-container {
+        min-width: 0px; 
+        width: 100%;
+        display: block; 
+        height: 70px;
+        border: solid red;
+        overflow: none;
+    }
+    .side-nav-top {
+        display: inline-block;
+        width: 33.3%;
+        border: solid;
+        height: 70px;
+        vertical-align: top;
+    }
+    .side-nav-middle {
+        width: 33.3%;
+        border: solid;
+        display: inline-block;
+        height: 70px;
+        vertical-align: top;
+    }
+    .side-nav-bottom {
+        width: 33.3%;
+        height: 70px;
+        display: inline-block;
+        border: solid;
+        vertical-align: top;
+    }
+    .main-browse-container {
+        display: inline-block;
+        border: solid green;
+        height: 100vh;
+        width: 100%;
+    }
+
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3) { 
+    .side-nav-container {
+        min-width: 0px; 
+        width: 100%;
+        display: block; 
+        height: 70px;
+        border: solid red;
+        overflow: none;
+    }
+    .side-nav-top {
+        display: inline-block;
+        width: 33.3%;
+        border: solid;
+        height: 70px;
+        vertical-align: top;
+    }
+    .side-nav-middle {
+        width: 33.3%;
+        border: solid;
+        display: inline-block;
+        height: 70px;
+        vertical-align: top;
+    }
+    .side-nav-bottom {
+        width: 33.3%;
+        height: 70px;
+        display: inline-block;
+        border: solid;
+        vertical-align: top;
+    }
+    .main-browse-container {
+        display: inline-block;
+        border: solid green;
+        height: 100vh;
+        width: 100%;
+    }
+    
+}
+
+/* Portrait */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: portrait) { 
+    
+    .side-nav-container {
+        min-width: 0px; 
+        width: 100%;
+        display: block; 
+        height: 70px;
+        border: solid red;
+        overflow: none;
+    }
+    .side-nav-top {
+        display: inline-block;
+        width: 33.3%;
+        border: solid;
+        height: 70px;
+        vertical-align: top;
+    }
+    .side-nav-middle {
+        width: 33.3%;
+        border: solid;
+        display: inline-block;
+        height: 70px;
+        vertical-align: top;
+    }
+    .side-nav-bottom {
+        width: 33.3%;
+        height: 70px;
+        display: inline-block;
+        border: solid;
+        vertical-align: top;
+    }
+    .main-browse-container {
+        display: inline-block;
+        border: solid green;
+        height: 100vh;
+        width: 100%;
+    }
+
+}
+
+/* Landscape */
+@media only screen 
+and (min-device-width: 414px) 
+and (max-device-width: 736px) 
+and (-webkit-min-device-pixel-ratio: 3)
+and (orientation: landscape) { 
+    .side-nav-container {
+        min-width: 0px; 
+        width: 100%;
+        display: block; 
+        height: 70px;
+        border: solid red;
+        overflow: none;
+    }
+    .side-nav-top {
+        display: inline-block;
+        width: 33.3%;
+        border: solid;
+        height: 70px;
+        vertical-align: top;
+    }
+    .side-nav-middle {
+        width: 33.3%;
+        border: solid;
+        display: inline-block;
+        height: 70px;
+        vertical-align: top;
+    }
+    .side-nav-bottom {
+        width: 33.3%;
+        height: 70px;
+        display: inline-block;
+        border: solid;
+        vertical-align: top;
+    }
+    .main-browse-container {
+        display: inline-block;
+        border: solid green;
+        height: 100vh;
+        width: 100%;
+    }
+    
+}

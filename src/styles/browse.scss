@@ -1,0 +1,48 @@
+ 
+body{
+    background-color: black !important
+}
+.loading-container{
+    color: white
+}
+.browse-container{
+    width: 100vw;
+    height:100vh;
+    border:solid
+}
+
+
+.side-nav-container {
+    min-width: 80px;
+    display:inline-block;
+    height:100%;
+    border: solid red;
+    overflow: none;
+}
+.main-browse-container {
+    display: inline-block;
+    border: solid green;
+    height: 100%;
+    width: 100%;
+    background-color: #f7f8fe;
+}
+
+#container {
+    white-space:nowrap;
+    height:100vh;
+}
+
+.side-nav-top{
+    height: 33.3%;
+    border: solid;
+}
+.side-nav-middle{
+    height: 33.3%;
+    border: solid;
+}
+.side-nav-bottom{
+    height: 33.3%;
+    border: solid;
+}
+
+

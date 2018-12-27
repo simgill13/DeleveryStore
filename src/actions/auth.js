@@ -27,6 +27,7 @@ const singleAuthCheck = () => {
   const user = localStorage.getItem("user");
 
   if (user) {
+    localStorage.removeItem("guest");
     const userObj = JSON.parse(user);
     return fetch(`/api/user/auth/check`, {
       method: "POST",
@@ -46,8 +47,7 @@ const singleAuthCheck = () => {
       }
     });
   } else {
-    localStorage.clear();
-    location.replace("/login");
+    localStorage.setItem("guest", JSON.stringify(true));
   }
 };
 

@@ -198,6 +198,7 @@ class Login extends Component {
 
   render() {
     const { loginbtn } = this.state;
+    const { history } = this.props;
 
     return (
       <Fragment>
@@ -263,7 +264,15 @@ class Login extends Component {
                 </button>
               </form>
               <div className="center-line" />
-              <div className="browse-option">
+              <div
+                onClick={() =>
+                  history.push({
+                    pathname: "/browse",
+                    state: {}
+                  })
+                }
+                className="browse-option"
+              >
                 <img className="search-img" src={this.searchIcon} />
                 <button className="search-button">Search</button>
               </div>
