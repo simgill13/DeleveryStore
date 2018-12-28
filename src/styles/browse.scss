@@ -8,24 +8,37 @@ body{
 .browse-container{
     width: 100vw;
     height:100vh;
-    border:solid
+    // border:solid
 }
 
 
 .side-nav-container {
-    min-width: 80px;
+    vertical-align: top;
+    min-width: 62px;
     display:inline-block;
     height:100%;
-    border: solid red;
+    // border: solid red;
     overflow: none;
+    transition: all 2500ms linear;
+    transition-delay: 200ms;
 }
 .main-browse-container {
     display: inline-block;
-    border: solid green;
+    // border: solid green;
     height: 100%;
     width: 100%;
-    background-color: #f7f8fe;
+    background-color: #000000;
 }
+.main-browse-container-tran{
+    display: inline-block;
+    // border: solid green;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    transition: all 2500ms linear;
+    transition-delay: 200ms;
+}
+
 
 #container {
     white-space:nowrap;
@@ -34,15 +47,21 @@ body{
 
 .side-nav-top{
     height: 33.3%;
-    border: solid;
+    // border: solid;
 }
 .side-nav-middle{
     height: 33.3%;
-    border: solid;
+    // border: solid;
 }
 .side-nav-bottom{
     height: 33.3%;
-    border: solid;
+    // border: solid;
+}
+
+.nav-logo{
+    height: 30px;
+    margin-left: 19px;
+    margin-top: 15px;
 }
 
 
