@@ -9,6 +9,7 @@ class Browse extends Component {
     super(props);
     this.browseContainer = createRef();
     this.sidenav = createRef();
+    this.sidenavInner = createRef();
     this.blogo = "https://res.cloudinary.com/sds-images/image/upload/v1545964675/bw_lbrrbw.png";
     this.state = {
       name: "browse",
@@ -20,6 +21,7 @@ class Browse extends Component {
       this.disableAnimation();
       setTimeout(() => {
         this.sidenav.current.style.backgroundColor = "#3b3b3b";
+        this.sidenavInner.current.style.boxShadow = "10px 10px 5px #dedede";
         this.browseContainer.current.style.backgroundColor = "#f6f7ff";
       }, 200);
     }, 3000);
@@ -51,11 +53,13 @@ class Browse extends Component {
           <div className="browse-container">
             <div id="container">
               <div ref={this.sidenav} className="side-nav-container">
-                <div className="side-nav-top">
-                  <img className="nav-logo animated fadeIn" src={this.blogo} />{" "}
+                <div ref={this.sidenavInner} className="inner-container-tran">
+                  <div className="side-nav-top">
+                    <img className="nav-logo animated fadeIn delay-1s" src={this.blogo} />{" "}
+                  </div>
+                  <div className="side-nav-middle"> </div>
+                  <div className="side-nav-bottom"> </div>
                 </div>
-                <div className="side-nav-middle"> </div>
-                <div className="side-nav-bottom"> </div>
               </div>
               <div ref={this.browseContainer} className={animComplete ? "main-browse-container-tran" : "main-browse-container"}>
                 <div />

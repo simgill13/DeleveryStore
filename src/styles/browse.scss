@@ -38,6 +38,15 @@ body{
     transition: all 2500ms linear;
     transition-delay: 200ms;
 }
+.inner-container-tran{
+   
+    height: 100%;
+    position: relative;
+    box-shadow: 10px 10px 5px #000000;
+    
+    transition: all 2500ms linear;
+    transition-delay: 200ms;
+}
 
 
 #container {
@@ -63,5 +72,7 @@ body{
     margin-left: 19px;
     margin-top: 15px;
 }
+
+
 
 

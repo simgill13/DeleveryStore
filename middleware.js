@@ -41,6 +41,7 @@ createToken = (req, res, next) => {
             const user = req.user
             jwt.sign({ user }, 'secretkey',{ expiresIn: "15m" }, (err, token) => {
                 if (err) {
+                    res.statusMessage = err;
                     res.sendStatus(403)
                 }else {
                     req.token = token
