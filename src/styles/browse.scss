@@ -1,18 +1,17 @@
- 
 body{
     background-color: black !important
-}
-.loading-container{
+    }
+    .loading-container{
     color: white
-}
-.browse-container{
+    }
+    .browse-container{
     width: 100vw;
     height:100vh;
     // border:solid
-}
-
-
-.side-nav-container {
+    }
+    
+    
+    .side-nav-container {
     vertical-align: top;
     min-width: 62px;
     display:inline-block;
@@ -21,15 +20,15 @@ body{
     overflow: none;
     transition: all 2500ms linear;
     transition-delay: 200ms;
-}
-.main-browse-container {
+    }
+    .main-browse-container {
     display: inline-block;
     // border: solid green;
     height: 100%;
     width: 100%;
     background-color: #000000;
-}
-.main-browse-container-tran{
+    }
+    .main-browse-container-tran{
     display: inline-block;
     // border: solid green;
     height: 100%;
@@ -37,42 +36,118 @@ body{
     background-color: #000000;
     transition: all 2500ms linear;
     transition-delay: 200ms;
-}
-.inner-container-tran{
-   
+    }
+    .inner-container-tran{
     height: 100%;
     position: relative;
     box-shadow: 10px 10px 5px #000000;
-    
     transition: all 2500ms linear;
     transition-delay: 200ms;
-}
-
-
-#container {
+    }
+    
+    
+    #container {
     white-space:nowrap;
     height:100vh;
-}
-
-.side-nav-top{
+    }
+    
+    .side-nav-top{
     height: 33.3%;
     // border: solid;
-}
-.side-nav-middle{
+    }
+    .side-nav-middle{
     height: 33.3%;
     // border: solid;
-}
-.side-nav-bottom{
+    }
+    .side-nav-bottom{
     height: 33.3%;
     // border: solid;
-}
-
-.nav-logo{
+    }
+    
+    .nav-logo{
     height: 30px;
     margin-left: 19px;
     margin-top: 15px;
-}
-
-
-
-
+    }
+    
+    .home-icon-container{
+    width: 100%;
+    text-align: center;
+    color: #7b7b7b;
+    font-size: 20px;
+    margin-bottom: 25px;
+    }
+    .home-icon-container{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    color: #7b7b7b;
+    font-size: 20px;
+    margin-bottom: 25px;
+    cursor:pointer;
+    }
+    .shop-icon-container{
+    width: 100%;
+    text-align: center;
+    color: #7b7b7b;
+    font-size: 20px;
+    margin-bottom: 25px;
+    cursor:pointer;
+    }
+    .track-icon-container{
+    width: 100%;
+    text-align: center;
+    color: #7b7b7b;
+    font-size: 20px;
+    margin-bottom: 25px;
+    cursor:pointer;
+    }
+    .contact-icon-container{
+    width: 100%;
+    text-align: center;
+    color: #7b7b7b;
+    font-size: 20px;
+    margin-bottom: 25px;
+    cursor:pointer;
+    }
+    .bottom-icon-container{
+    margin-top: 5%;
+    width: 100%;
+    text-align: center;
+    color: #7b7b7b;
+    font-size: 12px;
+    margin-bottom: 25px;
+    cursor:pointer;
+    }
+    .side-nav-bottom{
+    padding-top: 200%;
+    }
+    
+    .home-icon-container:hover .f-home:before{
+    content:"HOME";
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color:#ffd46f;
+    }
+    .shop-icon-container:hover .ff-shop:before{
+    content:"CART";
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color:#ffd46f;
+    }
+    .track-icon-container:hover .f-track:before{
+    content:"TRACK";
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color:#ffd46f;
+    }
+    .contact-icon-container:hover .f-contact:before{
+    content:"";
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    color:#ffd46f;
+    }

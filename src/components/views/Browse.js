@@ -1,6 +1,7 @@
 import React, { Component, Fragment, createRef } from "react";
-import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch, Redirect, NavLink } from "react-router-dom";
 import Loading from "components/animations/loading";
+import Cart from "./Cart";
 import "styles/browse.scss";
 import "styles/browseMobile.scss";
 
@@ -47,6 +48,7 @@ class Browse extends Component {
 
   browse = () => {
     const { animComplete } = this.state;
+    const { match } = this.props;
     if (animComplete) {
       return (
         <Fragment>
@@ -55,13 +57,55 @@ class Browse extends Component {
               <div ref={this.sidenav} className="side-nav-container">
                 <div ref={this.sidenavInner} className="inner-container-tran">
                   <div className="side-nav-top">
-                    <img className="nav-logo animated fadeIn delay-1s" src={this.blogo} />{" "}
+                    <img className="nav-logo animated fadeIn delay-1s" src={this.blogo} />
                   </div>
-                  <div className="side-nav-middle"> </div>
-                  <div className="side-nav-bottom"> </div>
+                  <div className="side-nav-middle ">
+                    <div className="home-icon-container animated fadeIn delay-1s">
+                      <NavLink
+                        activeStyle={{
+                          color: "white"
+                        }}
+                        to={`/browse/main`}
+                      >
+                        <i id="homeid" className=" f-home fa fa-home fa-lg grey " aria-hidden="true" />
+                      </NavLink>
+                    </div>
+                    <div className="shop-icon-container animated fadeIn delay-1s">
+                      <NavLink
+                        activeStyle={{
+                          color: "white"
+                        }}
+                        to={`${match.url}/cart`}
+                      >
+                        <i className=" ff-shop fa fa-shopping-basket" aria-hidden="true" />
+                      </NavLink>
+                    </div>
+                    <div className="track-icon-container animated fadeIn delay-1s">
+                      <NavLink
+                        activeStyle={{
+                          color: "white"
+                        }}
+                        to={`${match.url}/track`}
+                      >
+                        <i className=" f-track fa fa-car" aria-hidden="true" />
+                      </NavLink>
+                    </div>
+                  </div>
+                  <div className="side-nav-bottom">
+                    <div className="bottom-icon-container animated fadeIn delay-1s">
+                      <i className=" f-sms fa fa-comments-o" aria-hidden="true" />
+                    </div>
+                    <div className="bottom-icon-container animated fadeIn delay-1s ">
+                      <i className=" f-tele fa fa-phone" aria-hidden="true" />
+                    </div>
+                    <div className="bottom-icon-container animated fadeIn delay-1s ">
+                      <i className="fa fa-heart-o" aria-hidden="true" />
+                    </div>
+                  </div>
                 </div>
               </div>
               <div ref={this.browseContainer} className={animComplete ? "main-browse-container-tran" : "main-browse-container"}>
+                <Route path={"/browse/main"} component={Cart} />
                 <div />
               </div>
             </div>

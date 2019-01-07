@@ -23,14 +23,15 @@ let config = {
         filename: '[name].bundle.js',
     },
     devServer: {
-        historyApiFallback: true,
-        contentBase: './',
+      contentBase:  path.resolve(__dirname, 'public/index.html'),
+        
         proxy: {
           "/api/*":{
               target:"http://localhost:3000/",
               secure:"false"
           }
-      } 
+      },
+      historyApiFallback: true,
     },
     optimization: {
       
@@ -155,12 +156,12 @@ let config = {
       filename: "[name].css",
       chunkFilename: "[id].css"
     }),
-    new CompressionPlugin({
-      test: /\.js(\?.*)?$/i,
-      cache: true,
-      cache: path.resolve(__dirname, 'dist'),
-      algorithm: 'gzip'
-    }),
+    // new CompressionPlugin({
+    //   test: /\.js(\?.*)?$/i,
+    //   cache: true,
+    //   cache: path.resolve(__dirname, 'dist'),
+    //   algorithm: 'gzip'
+    // }),
     new PrettierPlugin({
       printWidth: 200,               
       tabWidth: 2,                 
